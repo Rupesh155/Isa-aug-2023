@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <!-- <h3> hello ejs file</h3> -->
+    <!-- <h4>my random number is  <%= Math.floor(Math.random()*100) %></h4> -->
+    <!-- <p> <%=5+4+6 %>   </p> -->
+
+    <h2> get vs post </h2>
+
+    <h2> get</h2>
+
+    <form  action="/user" method="GET" >
+        <label for="username"> Username</label>
+        <input type="text"  name="username" placeholder="Enter your name"/>
+        <label for="age"> age</label>
+
+        <input type="number"  name="age" placeholder="Enter your age"/>
+   <button type="submit"> sumbit</button>
+    </form>
+
+    <h3> post</h3>
+
+    <form  action="/user" method="POST" >
+        <label for="username"> Username</label>
+        <input type="text"  name="username" placeholder="Enter your name"/>
+        <label for="age"> age</label>
+
+        <input type="number"  name="age" placeholder="Enter your age"/>
+   <button type="submit"> sumbit</button>
+    </form>
+
+
+            
+
+
+</body>
+</html>
