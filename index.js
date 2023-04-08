@@ -103,50 +103,67 @@
 
 // lec-5
 
+// const express=require('express')
+
+// const app=express()
+
+// // app.use(express.json())
+// app.use(express.urlencoded({extended:true}))
+
+// const arr=['gym', 'dog', 'car', 'cat']
+
+// app.set('view engine' , 'ejs')
+
+// app.get('/',(req,res)=>{
+//     res.render('index')
+//     // res.send('hello')
+// })
+
+// app.get('/user',(req,res)=>{
+//     const {username, age} = req.query
+//     res.send(`${username} and ${age}`)
+// })
+
+//  app.post('/user',(req,res)=>{
+//     const {username,age}=req.body
+//     // console.log(user)
+//     res.send(`${username} and ${age}`)
+
+//  })
+
+// app.get('/r',(req,res)=>{
+//     const randomNum=Math.floor(Math.random()*50)
+//     res.render('random',{randomNum})
+// })
+
+// app.get('/todo',(req,res)=>{
+//     res.render('todo',{arr})
+// })
+
+
+// app.listen(4000,()=>{
+//     console.log('server running on port no 4000')
+// })
+
+
+// lect-7
+
 const express=require('express')
+  const app= express()
 
-const app=express()
+  app.set('view engine', 'ejs')
 
-// app.use(express.json())
-app.use(express.urlencoded({extended:true}))
+  // app.use( '/static' ,express.static('public'))
 
-const arr=['gym', 'dog', 'car', 'cat']
 
-app.set('view engine' , 'ejs')
-
-app.get('/',(req,res)=>{
+  app.get('/',(req,res)=>{
     res.render('index')
-    // res.send('hello')
-})
+  })
 
-app.get('/user',(req,res)=>{
-    const {username, age} = req.query
-    res.send(`${username} and ${age}`)
-})
+  app.listen(4000,()=>{
+    console.log('server runing on port on 4000')
+  })
 
- app.post('/user',(req,res)=>{
-    const {username,age}=req.body
-    // console.log(user)
-    res.send(`${username} and ${age}`)
-
- })
-
-app.get('/r',(req,res)=>{
-    const randomNum=Math.floor(Math.random()*50)
-    res.render('random',{randomNum})
-})
-
-app.get('/todo',(req,res)=>{
-    res.render('todo',{arr})
-})
-
-
-app.listen(4000,()=>{
-    console.log('server running on port no 4000')
-})
-
-          
-                              
 
                
                                          

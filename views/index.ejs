@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,14 +7,13 @@
     <title>Document</title>
 </head>
 <body> 
-    <!-- <h3> hello ejs file</h3> -->
-    <!-- <h4>my random number is  <%= Math.floor(Math.random()*100) %></h4> -->
-    <!-- <p> <%=5+4+6 %>   </p> -->
+     <h3> hello ejs file</h3>
+    <h4>my random number is  <%= Math.floor(Math.random()*100) %></h4>
+    <p> <%=5+4+6 %>   </p>
 
     <h2> get vs post </h2>
 
     <h2> get</h2>
-
     <form  action="/user" method="GET" >
         <label for="username"> Username</label>
         <input type="text"  name="username" placeholder="Enter your name"/>
@@ -34,10 +33,18 @@
         <input type="number"  name="age" placeholder="Enter your age"/>
    <button type="submit"> sumbit</button>
     </form>
-
-
-            
-
-
 </body>
-</html>
+</html> 
+
+ -->
+
+
+  <%- include('./partials/header') %>
+
+<h3> home file</h3>
+
+<%- include('./partials/footer') %>
+
+ 
+
+

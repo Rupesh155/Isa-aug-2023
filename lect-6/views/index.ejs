@@ -7,10 +7,13 @@
     <title>Document</title>
 </head>
 <body>
- -   <h3> todo my todo</h3>
-         <% for( let i of arr){%>
-             <h3> task is <%= i %></h3>
-        <% }%>
-     
+    <h3> display all data</h3>
+  <%  for(let i of comments){ %>
+    <h1>  ID is : <%= i.id %></h1>
+    <h2>NAME is : <%= i.userName  %></h2>
+    <h3> Comment is : <%= i.comment %> </h3>
+    <a href="/comments/<%= i.id %>"> show </a>
+
+  <%  }%>
 </body>
 </html>
