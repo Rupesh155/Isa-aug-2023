@@ -1,5 +1,8 @@
 const express=require('express')
   const app=express()
+  let methodOverride = require('method-override');
+  app.use(methodOverride('_method'))
+
   app.use(express.urlencoded({extended:true}))
 
   let comments=[
@@ -44,9 +47,7 @@ app.post('/comments',(req,res)=>{
     res.redirect('/comments')
     console.log(req.body)
 })
-
 //  to show a particular comment
-
 app.get('/comments/:commentId',(req,res)=>{
     const {commentId}=req.params
     console.log(commentId,"idddddddddddddd")
@@ -59,7 +60,31 @@ app.get('/comments/:commentId',(req,res)=>{
 })
 
 
+app.get('/comments/:commentId/edit',(req,res)=>{
+    const {commentId}=req.params;
+    const foundComment=comments.find((data)=>data.id==commentId)
+    console.log(foundComment,"rrrrrrr")
+    res.render('edit',{foundComment})
+})
 
+
+app.patch('/comments/:commentId',(req,res)=>{
+    let {commentId}=req.params
+    let {comment}=req.body
+    let foundComment=comments.find((data)=>data.id==commentId)
+    foundComment.comment=comment
+    console.log(foundComment)
+    res.redirect('/comments')
+})
+
+app.delete('/comments/:commentId',(req,res)=>{
+    let {commentId}=req.params
+    let data=comments.filter((data)=>data.id!=commentId)
+    comments=data
+    res.redirect('/comments')
+    console.log(data,"data")
+
+})
   app.listen(5000,()=>{
     console.log('server runing on port no 5000')
   })

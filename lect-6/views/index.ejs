@@ -13,6 +13,12 @@
     <h2>NAME is : <%= i.userName  %></h2>
     <h3> Comment is : <%= i.comment %> </h3>
     <a href="/comments/<%= i.id %>"> show </a>
+    <a href="/comments/<%= i.id %>/edit"> edit </a>
+    <form action="/comments/<%= i.id %>?_method=DELETE"  method="POST">
+      <button type="submit">delet</button>
+    </form>
+
+
 
   <%  }%>
 </body>
