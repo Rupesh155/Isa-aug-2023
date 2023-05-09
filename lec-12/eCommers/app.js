@@ -3,12 +3,11 @@ const app=express()
 const mongoose=require('mongoose')
 const router=require('./routes/productRoutes')
 const seedDB=require('./seed')
-app.set('views engine' ,'ejs')
+app.set('view engine' ,'ejs')
 app.set(express.static('public'))
 mongoose.connect('mongodb://127.0.0.1:27017/shoping-app')
 .then(()=>{
     console.log('db Connected')
-
 }).catch((err)=>{
     console.log(err)
 })
