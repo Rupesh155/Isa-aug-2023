@@ -1,7 +1,5 @@
 <%- include('./partials/header') %>
 <%- include('./partials/navbar') %>
-
-
 <body> 
     <div class="row">
         <% for(let item of products){ %>
@@ -12,7 +10,7 @@
                       <h3 class="card-title"> <%= item.name %> </h3>
                       <h5 class="card-title"> Rs: <%= item.price %> </h5>
                       <p class="card-text"> <%= item.desc.substring(0,100) %> </p>
-                      <a href="#" class="btn btn-primary">View Product</a>
+                      <a href="/product/<%=item._id%>" class="btn btn-primary">View Product</a>
                     </div>
                 </div>
             </div>

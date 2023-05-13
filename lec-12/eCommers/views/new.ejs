@@ -4,37 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="row">
+        <div class="col-6-mx-auto">
+            <form action="/product" method="POST">
+                <div class="mb-3">
+                <label class="form-label" for="name">Name:</label>
+                <input class="form-control" type="text" id="name" name="name" placeholder="Name of product"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="img">Image Url:</label>
+                <input  class="form-control" type="text" id="img" name="img" placeholder="Img of product"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="price">price:</label>
+                <input class="form-control"  type="number" id="price" name="price" placeholder="Price of the product"/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="desc">Descriptions:</label>
+                <input class="form-control"  type="text" id="desc" name="desc" placeholder="Descriptions of product"/>
+            </div>
+                <button  class="btn btn-sm btn-success" type="submit"> add </button>
+            </form>
 
-<div class="row">
-    <div class="col-6 mx-auto">
-        <form action="/products" method="POST">
-            <div class="mb-3">
-                <label for="naam" class="form-label">Name: </label>
-                <input type="text" class="form-control" name="name" id="naam" placeholder="Name of Product">
-            </div>
-            <div class="mb-3">
-                <label for="imge" class="form-label">Image Url: </label>
-                <input type="text" class="form-control" name="img" id="imge" placeholder="Image URL of Product">
-            </div>
-            <div class="mb-3">
-                <label for="paisa" class="form-label">Price: </label>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">Rs. </span>
-                    <input class="form-control" type="number" name="price" id="paisa" placeholder="Price of Product">
-                </div>
-            </div>
-        
-            <div class="mb-3">
-                <label for="des" class="form-label">Description: </label>
-                <textarea class="form-control"  name="desc" id="des" rows="5" placeholder="Description of Product"></textarea>
-            </div>
-            <button type="submit" class="btn btn-sm btn-success">Add</button>
-        </form>
+        </div>
+
     </div>
-</div>
+   
 </body>
 </html>
